@@ -13,21 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('header');
-});
 
 Route::get('/', function () {
-    return view('layout.content');
+    return view('layout.content', [
+        "title" => "Light Dashboard"
+    ]);
 });
 
 Route::get('/dashboard2', function () {
-    return view('layout2.content2');
+    return view('layout2.content2', [
+        "title" => "Dark Dashboard"
+    ]);
 });
 
-Route::get('layout.master', function () {
-    return view('header');
-});
 
 Route::get('layout.master', function () {
     return view('layout.content');
