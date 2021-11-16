@@ -26,7 +26,7 @@
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition {{  ($title == "Dark Dashboard") ? 'dark-mode' : '' }} sidebar-mini layout-fixed">
 <div class="wrapper">
 
   <!-- Preloader -->
@@ -35,11 +35,11 @@
   </div>
 
   <!-- Navbar -->
- @include('layout.navbar')
+ @include('partials.navbar')
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  @include('layout.sidebar')
+  @include('partials.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -49,7 +49,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  @include('layout.footer')
+  @include('partials.footer')
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

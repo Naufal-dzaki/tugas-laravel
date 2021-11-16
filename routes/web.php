@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,18 +16,16 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('layout.content', [
+    return view('contents.content', [
         "title" => "Light Dashboard"
     ]);
 });
 
 Route::get('/dashboard2', function () {
-    return view('layout2.content2', [
+    return view('contents.content2', [
         "title" => "Dark Dashboard"
     ]);
 });
 
 
-Route::get('layout.master', function () {
-    return view('layout.content');
-});
+route::get('/produk', [ProdukController::class,"index"]);
